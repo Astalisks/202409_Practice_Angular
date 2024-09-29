@@ -1,0 +1,10 @@
+services:
+  angular-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./my-angular-app:/usr/src/app/my-angular-app
+    command: npm start
